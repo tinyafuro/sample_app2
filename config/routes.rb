@@ -4,7 +4,7 @@ SampleApp::Application.routes.draw do
     :registrations => "registrations"
   }
   root  'static_pages#home'
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :destroy]
   
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
